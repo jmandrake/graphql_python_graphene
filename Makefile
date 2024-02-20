@@ -5,7 +5,7 @@ format:
 	# yapf --in-place --recursive --style="{indent_width: 4}" *.py Lambdas/
 
 lint:
-	find Lambdas -name 'stpAddress*.py' ! -name 'z_*.py' -exec python -m pylint --disable=R,C {} +
+	find scripts -name '*.py' ! -name 'z_*.py' -exec python -m pylint --disable=R,C {} +
 
 test:
 	python -m pytest -vv *.py
